@@ -25,9 +25,6 @@ public class EmployeeCollection {
 
 
 
-	public EmployeeCollection() {
-		// TODO Auto-generated constructor stub
-		
-	}
+	
 
 }
