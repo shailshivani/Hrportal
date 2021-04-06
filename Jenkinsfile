@@ -6,12 +6,24 @@ pipeline {
         bat 'mvn compile'
       }
     }
-    
+	stage('Build') {
+	steps {echo 'Building..'}
+}
+    stage('Test')
+ {steps 
+ {
+	echo 'Testing..'}
+}
     stage('unit test') {
       steps {
         bat 'mvn test'
       }
     }
+	stage('Deploy'){
+steps{
+echo 'Deploying...'
+}
+}
 
     stage('sonar analysis') {
       steps {
@@ -32,5 +44,6 @@ pipeline {
         bat(script: 'mvn deploy')
       }
     }
+    
   }
 }
